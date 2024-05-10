@@ -5,21 +5,21 @@
 class Gobackup < Formula
   desc "GoBackup"
   homepage ""
-  version "2.15.0"
+  version "2.15.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/itgcloud/gobackup/releases/download/v2.15.0/gobackup-darwin-amd64.tar.gz"
-      sha256 "f484df1c9aca4e21aba5bdd21736e8850deac2037419ba5a86ffd0f6907b9008"
+      url "https://github.com/itgcloud/gobackup/releases/download/v2.15.1/gobackup-darwin-amd64.tar.gz"
+      sha256 "814aed37a3f7a69163a2c567118ee51bff13057d34ffe265ac974c71ff959997"
 
       def install
         bin.install "gobackup"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/itgcloud/gobackup/releases/download/v2.15.0/gobackup-darwin-arm64.tar.gz"
-      sha256 "d720b911a2b776bad56cfd695a46c0c549028d2dced7ec7e02c467dc3fec048f"
+      url "https://github.com/itgcloud/gobackup/releases/download/v2.15.1/gobackup-darwin-arm64.tar.gz"
+      sha256 "1727ead6615970b1e4d0fad736999a6e20a00b69ee423f07029ce3542083188e"
 
       def install
         bin.install "gobackup"
@@ -29,16 +29,16 @@ class Gobackup < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/itgcloud/gobackup/releases/download/v2.15.0/gobackup-linux-amd64.tar.gz"
-      sha256 "83509e3f74331f8bd42d52f018890549d511188883e503d911da31f43d7b752a"
+      url "https://github.com/itgcloud/gobackup/releases/download/v2.15.1/gobackup-linux-amd64.tar.gz"
+      sha256 "80aa7a86a12d9ae90d6b873a33a02040c231e40330b8aeac4621d49619194d7a"
 
       def install
         bin.install "gobackup"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/itgcloud/gobackup/releases/download/v2.15.0/gobackup-linux-arm64.tar.gz"
-      sha256 "c5a1b6857f9fb06f9cec2e0f4acd67d9637642cce78c1eba9d3383b132c42dfd"
+      url "https://github.com/itgcloud/gobackup/releases/download/v2.15.1/gobackup-linux-arm64.tar.gz"
+      sha256 "203a10bb2e369e2b5b676b8c37911e4f91b8eccc5d1526968246a1552d006a1a"
 
       def install
         bin.install "gobackup"
