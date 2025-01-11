@@ -5,21 +5,21 @@
 class Gobackup < Formula
   desc "GoBackup"
   homepage ""
-  version "2.15.2"
+  version "2.16.0"
   license "MIT"
 
   on_macos do
-    on_intel do
-      url "https://github.com/itgcloud/gobackup/releases/download/v2.15.2/gobackup-darwin-amd64.tar.gz"
-      sha256 "7d32cf450b154e3765457dc8ddd32433cf8c4e0e6f6fc7696d491968e6fd2f6c"
+    if Hardware::CPU.intel?
+      url "https://github.com/itgcloud/gobackup/releases/download/v2.16.0/gobackup-darwin-amd64.tar.gz"
+      sha256 "167e389c7c69c63d5b1d583d491fa1c1429033d477415f4a5aa4be49672a554f"
 
       def install
         bin.install "gobackup"
       end
     end
-    on_arm do
-      url "https://github.com/itgcloud/gobackup/releases/download/v2.15.2/gobackup-darwin-arm64.tar.gz"
-      sha256 "d851d57a274d5082deacf31b06cff156ff4e9c75a03eb3247750c61273bee32d"
+    if Hardware::CPU.arm?
+      url "https://github.com/itgcloud/gobackup/releases/download/v2.16.0/gobackup-darwin-arm64.tar.gz"
+      sha256 "7bda1586cadc164d1c8dfa6a016779ffeeaff16c38adbce050f2943dffa1da2e"
 
       def install
         bin.install "gobackup"
@@ -28,20 +28,20 @@ class Gobackup < Formula
   end
 
   on_linux do
-    on_intel do
+    if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/itgcloud/gobackup/releases/download/v2.15.2/gobackup-linux-amd64.tar.gz"
-        sha256 "8d205f5b036c7a3e2bf5574f494011351c4c105c8c51624230af71cc258e8805"
+        url "https://github.com/itgcloud/gobackup/releases/download/v2.16.0/gobackup-linux-amd64.tar.gz"
+        sha256 "35989949f2f21be34ec8e2ee94a685ba0de9935e1ef60a5f4d9e55080cc6c395"
 
         def install
           bin.install "gobackup"
         end
       end
     end
-    on_arm do
+    if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/itgcloud/gobackup/releases/download/v2.15.2/gobackup-linux-arm64.tar.gz"
-        sha256 "bf7b70279afecc95d843cf621dba6ef70ee68d2247bd893c2e30ce4b7201d5aa"
+        url "https://github.com/itgcloud/gobackup/releases/download/v2.16.0/gobackup-linux-arm64.tar.gz"
+        sha256 "a3403bc74b17398bc2a7c09c051816c29d6086848517e53f83189ce5024f4a7f"
 
         def install
           bin.install "gobackup"
