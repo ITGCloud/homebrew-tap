@@ -11,7 +11,7 @@ class Gobackup < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/itgcloud/gobackup/releases/download/v2.16.2/gobackup-darwin-amd64.tar.gz"
-      sha256 "26f02b70fd3a92c089ff57e290073552a956ac571c8dc904934352e3e9fb1e3f"
+      sha256 "592ed4067a4d4e0139a926be36a7fbc436413ade7e23ae7503d564e8b0adbfd4"
 
       def install
         bin.install "gobackup"
@@ -19,7 +19,7 @@ class Gobackup < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/itgcloud/gobackup/releases/download/v2.16.2/gobackup-darwin-arm64.tar.gz"
-      sha256 "50d3c5300233ebe6009d868707cd23ea357ca5813d2ce77cb53da18f4ec75ee7"
+      sha256 "7bcddfed1a5cd4f6b73e15dab68ababb7550554160de3c003bcf0982e5c0656f"
 
       def install
         bin.install "gobackup"
@@ -31,7 +31,7 @@ class Gobackup < Formula
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
         url "https://github.com/itgcloud/gobackup/releases/download/v2.16.2/gobackup-linux-amd64.tar.gz"
-        sha256 "cae84978b3f9c31fa2bcd3bd142d5830decc4712ff2f535fecfafafaabec414a"
+        sha256 "f9f2c2ab7ceacbe8a066b6872a16b94e9a5caf18774b48731f29f52b62461199"
 
         def install
           bin.install "gobackup"
@@ -41,7 +41,7 @@ class Gobackup < Formula
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
         url "https://github.com/itgcloud/gobackup/releases/download/v2.16.2/gobackup-linux-arm64.tar.gz"
-        sha256 "e99565b24f309029686fe48795edc6d2c2b7dbf29d16871486a401775ee891d4"
+        sha256 "8c6ab3769d773d6d957ca490f760bb58579bc205cf7257c2b59c45cd5cda3caa"
 
         def install
           bin.install "gobackup"
